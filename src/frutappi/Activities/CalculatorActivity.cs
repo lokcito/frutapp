@@ -16,30 +16,36 @@ namespace frutappi.Activities
     [Activity(Label = "CalculatorActivity")]
     public class CalculatorActivity : Activity
     {
-        private TextView calculatorText;
+        private EditText calculatorText;
 
         private string[] numbers = new string[2];
         private string @operator;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_grid);
+            SetContentView(Resource.Layout.activity_calculator);
             // Create your application here
+            calculatorText = FindViewById<EditText>(Resource.Id.calculatorText);
         }
-        //[Java.Interop.Export("ButtonClick")]
-        public void ButtonClick(View v)
+        [Java.Interop.Export("whateveryoulike")]
+        public void whateveryoulike(View v)
         {
             Button button = (Button)v;
-            /*if ("0123456789.".Contains(button.Text))
+            if ("0123456789.".Contains(button.Text))
+            {
                 AddDigitOrDecimalPoint(button.Text);
-            else if ("÷×+-".Contains(button.Text))
+            } else if ("÷×+-".Contains(button.Text)) {
                 AddOperator(button.Text);
-            else if ("=" == button.Text)
+            } else if ("=" == button.Text)
+            {
                 Calculate();
-            else
-                Erase();*/
+            } else
+            {
+                Erase();
+            }
+                
         }
-        /*private void AddDigitOrDecimalPoint(string value)
+        private void AddDigitOrDecimalPoint(string value)
         {
             int index = @operator == null ? 0 : 1;
 
@@ -50,7 +56,11 @@ namespace frutappi.Activities
 
             UpdateCalculatorText();
         }
-
+        private void UpdateCalculatorText() {
+            int index = @operator == null ? 0 : 1;
+            calculatorText.Text = $"{numbers[index]}";
+            calculatorText.SetSelection(calculatorText.Text.Length);
+        }//=> calculatorText.Text = $"{numbers[0]} {@operator} {numbers[1]}";
         private void AddOperator(string value)
         {
             if (numbers[1] != null)
@@ -63,7 +73,6 @@ namespace frutappi.Activities
 
             UpdateCalculatorText();
         }
-
         private void Calculate(string newOperator = null)
         {
             double? result = null;
@@ -94,7 +103,6 @@ namespace frutappi.Activities
                 UpdateCalculatorText();
             }
         }
-
         private void Erase()
         {
             numbers[0] = numbers[1] = null;
@@ -102,7 +110,6 @@ namespace frutappi.Activities
             UpdateCalculatorText();
         }
 
-        private void UpdateCalculatorText() => calculatorText.Text = $"{numbers[0]} {@operator} {numbers[1]}";*/
-    
+      
     }
 }

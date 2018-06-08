@@ -5,18 +5,11 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <HorizontalScrollView
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <TextView
-            android:id="@+id/calculator_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:textSize="50sp"
-            android:text="123" />
-    </HorizontalScrollView>
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/calculatorText" />
     <GridLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -26,6 +19,7 @@
         android:rowCount="4"
         android:columnCount="4">
         <Button
+            android:layout_columnSpan="2"
             style="@style/button_calculator"
             android:text="DEL" />
         <Button
