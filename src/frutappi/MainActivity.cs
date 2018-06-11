@@ -1,18 +1,23 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
-using System;
-using frutappi.Activities;
 using Android.Content;
+
+using frutappi.Activities;
+using frutappi.Models;
+
+using frutappi.Helpers;
 
 namespace frutappi
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity
     {
         Button btnShowProducts;
         Button btnShowCalculator;
+        Button btnInsert;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,6 +28,8 @@ namespace frutappi
             btnShowProducts.Click += showCatalog;
             btnShowCalculator = FindViewById<Button>(Resource.Id.btnCalculator);
             btnShowCalculator.Click += showCalculator;
+            btnInsert = FindViewById<Button>(Resource.Id.btnInsert);
+            btnInsert.Click += loadRow;
         }
         private void showCatalog(object sender, EventArgs args)
         {
@@ -33,6 +40,21 @@ namespace frutappi
         {
             Intent newActivity = new Intent(this, typeof(CalculatorActivity));
             this.StartActivity(newActivity);
+        }
+        private void loadRow(object sender, EventArgs args)
+        {
+            Product o = new Product();
+            o.id = 1;
+            o.name = "kkk";
+            o.description = "jkjjkjkjkjk";
+            if (DatabaseHelper.insert(ref o, DatabaseHelper.locate(Settings.DATABASE_PATH)))
+            {
+                Toast.MakeText(this, "Registro insertado correctamente.", ToastLength.Short).Show();
+            } else
+            {
+                Toast.MakeText(this, "Registro insertado fallido.", ToastLength.Short).Show();
+            }
+
         }
     }
 }

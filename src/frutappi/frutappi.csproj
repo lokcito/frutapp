@@ -58,11 +58,14 @@
   <ItemGroup>
     <Compile Include="Activities\CatalogActivity.cs" />
     <Compile Include="Adapters\ProductAdapter.cs" />
+    <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\CalculatorActivity.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SplashScreenActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -97,6 +100,9 @@
     <AndroidResource Include="Resources\layout\activity_calculator.axml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.4.118</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +132,15 @@
     <AndroidResource Include="Resources\layout\activity_catalog.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\frutapp_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

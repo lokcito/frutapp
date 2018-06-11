@@ -7,11 +7,15 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
+        <Button
+            android:text="Insertar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnInsert" />
         <Button
             android:text="Button"
             android:layout_width="wrap_content"

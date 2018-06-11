@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using frutappi.Adapters;
 using frutappi.Models;
+using frutappi.Helpers;
 
 namespace frutappi.Activities
 {
@@ -25,7 +26,15 @@ namespace frutappi.Activities
             SetContentView(Resource.Layout.activity_catalog);
 
             listViewCatalog = FindViewById<ListView>(Resource.Id.listViewProducts);
-            productList = new List<Product>() {
+            productList = DatabaseHelper.getProducts(DatabaseHelper.locate(Settings.DATABASE_PATH));
+            /*foreach(var i in DatabaseHelper.getProducts(DatabaseHelper.locate(Settings.DATABASE_PATH)))
+            {
+                productList.Add(new Product()
+                {
+                    name = i.name
+                });
+            }*/
+            /*//productList = DatabaseHelper.getProducts(Settings.DATABASE_PATH); new List<Product>() {
                 new Product(){name = "Uno" },
                 new Product(){name = "Dos" },
                 new Product(){name = "Tres" },
@@ -34,8 +43,9 @@ namespace frutappi.Activities
                 new Product(){name = "Seis" },
                 new Product(){name = "Siete" },
                 new Product(){name = "Ocho" },
-            };
-            ProductAdapter productAdapter = new ProductAdapter(this, productList);
+            };*/
+
+        ProductAdapter productAdapter = new ProductAdapter(this, productList);
             listViewCatalog.Adapter = productAdapter;
 
             // Create your application here
