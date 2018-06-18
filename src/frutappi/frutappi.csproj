@@ -69,6 +69,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Activities\UsersActivity.cs" />
     <Compile Include="Adapters\UserAdapter.cs" />
+    <Compile Include="Presenters\MainPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -149,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\frutapp_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

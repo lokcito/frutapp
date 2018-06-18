@@ -9,6 +9,7 @@ using frutappi.Activities;
 using frutappi.Models;
 
 using frutappi.Helpers;
+using frutappi.Presenters;
 
 namespace frutappi
 {
@@ -19,47 +20,28 @@ namespace frutappi
         Button btnShowCalculator;
         Button btnInsert;
         Button btnUsers;
+        MainPresenter presenter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            presenter = new MainPresenter(this);
             btnShowProducts = FindViewById<Button>(Resource.Id.btnShowProducts);
-            btnShowProducts.Click += showCatalog;
+            btnShowProducts.Click += presenter.showCatalog;
             btnShowCalculator = FindViewById<Button>(Resource.Id.btnCalculator);
-            btnShowCalculator.Click += showCalculator;
+            btnShowCalculator.Click += presenter.showCalculator;
             btnInsert = FindViewById<Button>(Resource.Id.btnInsert);
             btnInsert.Click += loadRow;
             btnUsers = FindViewById<Button>(Resource.Id.btnShowUsers);
-            btnUsers.Click += showUsers;
+            btnUsers.Click += presenter.showUsers;
         }
-        private void showCatalog(object sender, EventArgs args)
+        protected void loadRow(object sender, EventArgs args)
         {
-            Intent newActivity = new Intent(this, typeof(CatalogActivity));
-            this.StartActivity(newActivity);
-        }
-        private void showUsers(object sender, EventArgs args)
-        {
-            Intent newActivity = new Intent(this, typeof(UsersActivity));
-            this.StartActivity(newActivity);
-        }
-        private void showCalculator(object sender, EventArgs args)
-        {
-            Intent newActivity = new Intent(this, typeof(CalculatorActivity));
-            this.StartActivity(newActivity);
-        }
-        private void loadRow(object sender, EventArgs args)
-        {
-            Product o = new Product();
-            o.id = 1;
-            o.name = "kkk";
-            o.description = "jkjjkjkjkjk";
-            if (DatabaseHelper.insert(ref o, DatabaseHelper.locate(Settings.DATABASE_PATH)))
-            {
+            if(presenter.loadRow(sender, args)) {
                 Toast.MakeText(this, "Registro insertado correctamente.", ToastLength.Short).Show();
-            } else
-            {
+            } else {
                 Toast.MakeText(this, "Registro insertado fallido.", ToastLength.Short).Show();
             }
 
