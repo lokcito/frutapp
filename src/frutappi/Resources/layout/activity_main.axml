@@ -31,5 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnShowProducts" />
+        <Button
+            android:text="Ver Usuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnShowUsers" />
     </LinearLayout>
 </RelativeLayout>

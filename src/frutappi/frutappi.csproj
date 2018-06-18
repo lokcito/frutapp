@@ -66,6 +66,9 @@
     <Compile Include="Activities\CalculatorActivity.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SplashScreenActivity.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Activities\UsersActivity.cs" />
+    <Compile Include="Adapters\UserAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -98,12 +101,17 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
     <AndroidResource Include="Resources\layout\activity_calculator.axml" />
+    <AndroidResource Include="Resources\layout\activity_users.axml" />
+    <AndroidResource Include="Resources\layout\adapter_user_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.4.118</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
+    <PackageReference Include="RestSharp">
+      <Version>106.3.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\icecream.png" />

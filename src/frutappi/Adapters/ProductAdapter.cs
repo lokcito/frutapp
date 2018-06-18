@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -52,13 +53,15 @@ namespace frutappi.Adapters
                 //replace with your item and your holder items
                 //comment back in
                 view = inflater.Inflate(Resource.Layout.adapter_product_item, parent, false);
-                holder.Title = view.FindViewById<TextView>(Resource.Id.textView1);
+                holder.Name = view.FindViewById<TextView>(Resource.Id.textName);
+                holder.Image = view.FindViewById<ImageView>(Resource.Id.imageProduct);
                 view.Tag = holder;
             }
 
 
             //fill in your items
-            holder.Title.Text = list[position].name;
+            holder.Name.Text = list[position].name;
+            holder.Image.SetColorFilter(Color.ParseColor(list[position].color + "00"));// Background.set = list[position].color;
 
             return view;
         }
@@ -83,6 +86,7 @@ namespace frutappi.Adapters
     class ProductAdapterViewHolder : Java.Lang.Object
     {
         //Your adapter views to re-use
-        public TextView Title { get; set; }
+        public TextView Name { get; set; }
+        public ImageView Image { get; set; }
     }
 }

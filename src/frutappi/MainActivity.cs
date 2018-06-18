@@ -18,6 +18,7 @@ namespace frutappi
         Button btnShowProducts;
         Button btnShowCalculator;
         Button btnInsert;
+        Button btnUsers;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,10 +31,17 @@ namespace frutappi
             btnShowCalculator.Click += showCalculator;
             btnInsert = FindViewById<Button>(Resource.Id.btnInsert);
             btnInsert.Click += loadRow;
+            btnUsers = FindViewById<Button>(Resource.Id.btnShowUsers);
+            btnUsers.Click += showUsers;
         }
         private void showCatalog(object sender, EventArgs args)
         {
             Intent newActivity = new Intent(this, typeof(CatalogActivity));
+            this.StartActivity(newActivity);
+        }
+        private void showUsers(object sender, EventArgs args)
+        {
+            Intent newActivity = new Intent(this, typeof(UsersActivity));
             this.StartActivity(newActivity);
         }
         private void showCalculator(object sender, EventArgs args)

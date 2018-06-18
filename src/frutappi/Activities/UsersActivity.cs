@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,27 +12,26 @@ using Android.Views;
 using Android.Widget;
 using frutappi.Adapters;
 using frutappi.Models;
-using frutappi.Helpers;
 
 namespace frutappi.Activities
 {
-    [Activity(Label = "CatalogActivity")]
-    public class CatalogActivity : Activity
+    [Activity(Label = "UsersActivity")]
+    public class UsersActivity : Activity
     {
-        ListView listViewCatalog;
-        List<Product> productList;
+        ListView listViewUsers;
+        List<User> userList = new List<User>();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_catalog);
-
-            listViewCatalog = FindViewById<ListView>(Resource.Id.listViewProducts);
+            SetContentView(Resource.Layout.activity_users);
+            listViewUsers = FindViewById<ListView>(Resource.Id.listViewUsers);
             //productList = DatabaseHelper.getProducts(DatabaseHelper.locate(Settings.DATABASE_PATH)); //Obtiene productos de SQLite
             //productList = Product.local(); //Obtiene productos de estaticos
-            productList = Product.sync(); //Obtiene productos de la nube
+            userList = User.sync(); //Obtiene productos de la nube
 
-            ProductAdapter productAdapter = new ProductAdapter(this, productList);
-            listViewCatalog.Adapter = productAdapter;
+            UserAdapter userAdapter = new UserAdapter(this, userList);
+            listViewUsers.Adapter = userAdapter;
+            // Create your application here
         }
     }
 }
