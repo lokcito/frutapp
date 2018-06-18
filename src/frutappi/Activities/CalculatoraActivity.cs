@@ -13,8 +13,8 @@ using Android.Widget;
 
 namespace frutappi.Activities
 {
-    [Activity(Label = "CalculatorActivity")]
-    public class CalculatorActivity : Activity
+    [Activity(Label = "CalculatoraActivity")]
+    public class CalculatoraActivity : Activity
     {
         private EditText calculatorText;
 

@@ -20,6 +20,7 @@ namespace frutappi
         Button btnShowCalculator;
         Button btnInsert;
         Button btnUsers;
+        Button btnMap;
         MainPresenter presenter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,7 +37,11 @@ namespace frutappi
             btnInsert.Click += loadRow;
             btnUsers = FindViewById<Button>(Resource.Id.btnShowUsers);
             btnUsers.Click += presenter.showUsers;
+            btnMap = FindViewById<Button>(Resource.Id.btnShowMap);
+            btnMap.Click += presenter.showLocations;
         }
+
+
         protected void loadRow(object sender, EventArgs args)
         {
             if(presenter.loadRow(sender, args)) {

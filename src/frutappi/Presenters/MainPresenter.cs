@@ -25,7 +25,7 @@ namespace frutappi.Presenters
         }
         public void showCalculator(object sender, EventArgs args)
         {
-            Intent newActivity = new Intent(this.context, typeof(CalculatorActivity));
+            Intent newActivity = new Intent(this.context, typeof(CalculatoraActivity));
             this.context.StartActivity(newActivity);
         }
         public bool loadRow(object sender, EventArgs args)
@@ -44,6 +44,11 @@ namespace frutappi.Presenters
             }
 
         }
-
+ 
+        public void showLocations(object sender, EventArgs args)
+        {
+            Intent newActivity = new Intent(this.context, typeof(LocationsActivity));
+            this.context.StartActivity(newActivity);
+        }
     }
 }
