@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace frutappi
 {
-    [Activity(Label = "SplashScreenActivity", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Frutapp", Icon = "@mipmap/icecream", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashScreenActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -43,3 +43,9 @@ namespace frutappi
         }
     }
 }
+
+ //- Start Android Studio
+ //- Select menu "Tools > Android > SDK Manager"
+ //- Click "SDK Tools" tab
+ //- Check "Android Emulator" checkbox
+ //- Click "OK"
