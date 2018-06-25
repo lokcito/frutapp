@@ -20,25 +20,14 @@ namespace frutappi.Activities
         Button btnOne;
         Button btnTwo;
         FrameLayout playQuoteFragment;
-        FragmentTransaction ft;
+
         private void showTwo(object sender, EventArgs args)
         {
-            var quoteFrag = new FragmentTwo();
-
-            FragmentTransaction ft = FragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.fragmentMany, quoteFrag);
-            ft.AddToBackStack(null);
-            ft.SetTransition(FragmentTransit.FragmentFade);
-            ft.Commit();
+            changeFrame("two");
         }
         private void showOne(object sender, EventArgs args)
         {
-            var quoteFrag = new FragmentOne();
-
-            ft.Replace(Resource.Id.fragmentMany, quoteFrag);
-            ft.AddToBackStack(null);
-            ft.SetTransition(FragmentTransit.FragmentFade);
-            ft.Commit();
+            changeFrame("one");
         }
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -49,8 +38,23 @@ namespace frutappi.Activities
             btnTwo = FindViewById<Button>(Resource.Id.button2);
             btnOne.Click += showOne;
             btnTwo.Click += showTwo;
-            ft = FragmentManager.BeginTransaction();
 
+
+        }
+        private void changeFrame(string _type) {
+            FragmentTransaction ft = FragmentManager.BeginTransaction();
+
+            if ( _type.Equals("one") ) {
+                var quoteFrag = new FragmentOne();
+                ft.Replace(Resource.Id.fragmentMany, quoteFrag);
+            } else {
+                var quoteFrag = new FragmentTwo();
+                ft.Replace(Resource.Id.fragmentMany, quoteFrag);
+            }
+            //ft.AddToBackStack(null);
+            ft.SetTransition(FragmentTransit.FragmentFade);
+            ft.Commit();
+            
         }
     }
 }
