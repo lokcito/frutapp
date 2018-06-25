@@ -57,7 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\CatalogActivity.cs" />
+    <Compile Include="Activities\MainFragmentActivity.cs" />
     <Compile Include="Adapters\ProductAdapter.cs" />
+    <Compile Include="Fragments\FragmentOne.cs" />
+    <Compile Include="Fragments\FragmentTwo.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Product.cs" />
@@ -154,7 +157,19 @@
     <AndroidResource Include="Resources\drawable\frutapp_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presenters\" />
+    <AndroidResource Include="Resources\layout\activity_main_fragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_one.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_two.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

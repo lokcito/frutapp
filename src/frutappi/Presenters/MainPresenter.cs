@@ -50,5 +50,10 @@ namespace frutappi.Presenters
             Intent newActivity = new Intent(this.context, typeof(LocationsActivity));
             this.context.StartActivity(newActivity);
         }
+        public void showFragment(object sender, EventArgs args)
+        {
+            Intent newActivity = new Intent(this.context, typeof(MainFragmentActivity));
+            this.context.StartActivity(newActivity);
+        }
     }
 }
