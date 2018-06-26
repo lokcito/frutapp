@@ -59,11 +59,13 @@
     <Compile Include="Activities\CatalogActivity.cs" />
     <Compile Include="Activities\MainFragmentActivity.cs" />
     <Compile Include="Adapters\ProductAdapter.cs" />
+    <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\FragmentOne.cs" />
     <Compile Include="Fragments\FragmentTwo.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Presenters\FragmentTwoPresenter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\CalculatoraActivity.cs" />
@@ -168,6 +170,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_two.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment3.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

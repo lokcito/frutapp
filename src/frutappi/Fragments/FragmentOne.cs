@@ -30,7 +30,9 @@ namespace frutappi.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            return inflater.Inflate(Resource.Layout.fragment_one, container, false);
+            View view = inflater.Inflate(Resource.Layout.fragment_one, container, false);
+
+            return view;
 
             //return base.OnCreateView(Resource.Layout.fragment_one, container, savedInstanceState);
         }

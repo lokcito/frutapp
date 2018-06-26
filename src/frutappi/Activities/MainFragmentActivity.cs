@@ -19,6 +19,7 @@ namespace frutappi.Activities
         bool showingTwoFragments;
         Button btnOne;
         Button btnTwo;
+        Button btntres;
         FrameLayout playQuoteFragment;
 
         private void showTwo(object sender, EventArgs args)
@@ -29,6 +30,11 @@ namespace frutappi.Activities
         {
             changeFrame("one");
         }
+        private void show3(object sender, EventArgs args)
+        {
+            changeFrame("tres");
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,18 +42,29 @@ namespace frutappi.Activities
             playQuoteFragment = FindViewById<FrameLayout>(Resource.Id.fragmentMany);
             btnOne = FindViewById<Button>(Resource.Id.button1);
             btnTwo = FindViewById<Button>(Resource.Id.button2);
+            btntres = FindViewById<Button>(Resource.Id.button3);
             btnOne.Click += showOne;
             btnTwo.Click += showTwo;
+            btntres.Click += show3;
 
 
         }
         private void changeFrame(string _type) {
             FragmentTransaction ft = FragmentManager.BeginTransaction();
 
-            if ( _type.Equals("one") ) {
+            if (_type.Equals("one"))
+            {
                 var quoteFrag = new FragmentOne();
                 ft.Replace(Resource.Id.fragmentMany, quoteFrag);
-            } else {
+            }
+            else if (_type.Equals("tres")) {
+
+                var quoteFrag = new Fragment3();
+                ft.Replace(Resource.Id.fragmentMany, quoteFrag);
+            }
+
+            else
+            {
                 var quoteFrag = new FragmentTwo();
                 ft.Replace(Resource.Id.fragmentMany, quoteFrag);
             }
