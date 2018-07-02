@@ -22,7 +22,10 @@ namespace frutappi
         Button btnUsers;
         Button btnMap;
         Button btnFragment;
+        Button btnShowTabs;
+        Button btnShowMenu;
         MainPresenter presenter;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -42,6 +45,10 @@ namespace frutappi
             btnMap.Click += presenter.showLocations;
             btnFragment = FindViewById<Button>(Resource.Id.btnShowFragment);
             btnFragment.Click += presenter.showFragment;
+            btnShowTabs = FindViewById<Button>(Resource.Id.btnShowTabs);
+            btnShowTabs.Click += presenter.showTabs;
+            btnShowMenu = FindViewById<Button>(Resource.Id.btnShowMenu);
+            btnShowMenu.Click += presenter.showMenu;
         }
 
 

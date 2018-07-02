@@ -55,5 +55,15 @@ namespace frutappi.Presenters
             Intent newActivity = new Intent(this.context, typeof(MainFragmentActivity));
             this.context.StartActivity(newActivity);
         }
+        public void showTabs(object sender, EventArgs args)
+        {
+            Intent newActivity = new Intent(this.context, typeof(TabActivity));
+            this.context.StartActivity(newActivity);
+        }
+        public void showMenu(object sender, EventArgs args)
+        {
+            Intent newActivity = new Intent(this.context, typeof(MenuActivity));
+            this.context.StartActivity(newActivity);
+        }
     }
 }

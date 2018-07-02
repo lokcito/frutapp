@@ -49,6 +49,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/btnShowFragment" />
+            <Button
+                android:text="Ver Tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnShowTabs" />
+            <Button
+                android:text="Ver Menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnShowMenu" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

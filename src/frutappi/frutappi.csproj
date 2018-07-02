@@ -76,6 +76,8 @@
     <Compile Include="Adapters\UserAdapter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Activities\LocationsActivity.cs" />
+    <Compile Include="Activities\TabActivity.cs" />
+    <Compile Include="Activities\MenuActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -111,6 +113,18 @@
     <AndroidResource Include="Resources\layout\activity_users.axml" />
     <AndroidResource Include="Resources\layout\adapter_user_item.axml" />
     <AndroidResource Include="Resources\layout\activity_map.axml" />
+    <AndroidResource Include="Resources\layout\activity_tab.axml" />
+    <AndroidResource Include="Resources\menu\navigation.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\ic_home_black_24dp.xml" />
+    <AndroidResource Include="Resources\drawable\ic_dashboard_black_24dp.xml" />
+    <AndroidResource Include="Resources\drawable\ic_notifications_black_24dp.xml" />
+    <AndroidResource Include="Resources\layout\activity_menu.axml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="Resources\menu\activity_menu_drawer.xml" />
+    <AndroidResource Include="Resources\values\drawables.xml" />
+    <AndroidResource Include="Resources\layout\nav_header_main.axml" />
+    <AndroidResource Include="Resources\layout\app_bar_main.axml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl">
@@ -177,6 +191,9 @@
     <AndroidResource Include="Resources\layout\fragment3.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
