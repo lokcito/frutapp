@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Firebase.Database;
 using RestSharp;
 using RestSharp.Deserializers;
 using SimpleJson;
@@ -32,6 +33,13 @@ namespace frutappi.Models
                 new Product(){name = "Siete" },
                 new Product(){name = "Ocho" },
             };            
+        }
+
+        public static bool fireSync() {
+            var userNamesRef = FirebaseDatabase.GetInstance("https://myxamarinproject-209715.firebaseio.com").GetReference("/");
+            DataSnapshot o = userNamesRef.
+
+            return false;
         }
 
         public static List<Product> sync() {
