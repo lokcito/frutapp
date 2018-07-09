@@ -17,5 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button1" />
+        <FrameLayout
+            android:id="@+id/googlemaps"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="com.google.android.gms.maps.MapFragment" />
+        <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2" />
     </LinearLayout>
 </LinearLayout>
