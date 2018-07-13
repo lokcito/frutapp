@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "645355471532",
+    "firebase_url": "https://myxamarinproject-209715.firebaseio.com",
+    "project_id": "myxamarinproject-209715",
+    "storage_bucket": "myxamarinproject-209715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645355471532:android:7f6c0b58f10a2649",
+        "android_client_info": {
+          "package_name": "frutappi.frutappi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645355471532-8aq3j29t4e6tggkerv0thtg2feefi5tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjT8DamHvea_7XSm3rAND8uJ_Q8CWbNrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -24,6 +24,7 @@ namespace frutappi
         Button btnFragment;
         Button btnShowTabs;
         Button btnShowMenu;
+        Button btnShowFriends;
         MainPresenter presenter;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -49,6 +50,8 @@ namespace frutappi
             btnShowTabs.Click += presenter.showTabs;
             btnShowMenu = FindViewById<Button>(Resource.Id.btnShowMenu);
             btnShowMenu.Click += presenter.showMenu;
+            btnShowFriends = FindViewById<Button>(Resource.Id.btnShowFriends);
+            btnShowFriends.Click += presenter.showFriends;
         }
 
 

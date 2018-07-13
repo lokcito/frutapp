@@ -59,6 +59,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/btnShowMenu" />
+            <Button
+                android:text="Ver Chat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnShowFriends" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

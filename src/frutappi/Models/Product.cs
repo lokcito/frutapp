@@ -9,7 +9,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Firebase.Database;
 using RestSharp;
 using RestSharp.Deserializers;
 using SimpleJson;
@@ -36,8 +35,8 @@ namespace frutappi.Models
         }
 
         public static bool fireSync() {
-            var userNamesRef = FirebaseDatabase.GetInstance("https://myxamarinproject-209715.firebaseio.com").GetReference("/");
-            DataSnapshot o = userNamesRef.
+            //var userNamesRef = FirebaseDatabase.GetInstance("https://myxamarinproject-209715.firebaseio.com").GetReference("/");
+            //DataSnapshot o = userNamesRef.
 
             return false;
         }

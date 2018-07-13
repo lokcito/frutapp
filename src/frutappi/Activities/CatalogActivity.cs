@@ -12,6 +12,12 @@ using Android.Widget;
 using frutappi.Adapters;
 using frutappi.Models;
 using frutappi.Helpers;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp;
+using FireSharp.Response;
+using FireSharp.EventStreaming;
+//using Firebase.Database;
 
 namespace frutappi.Activities
 {
@@ -20,6 +26,9 @@ namespace frutappi.Activities
     {
         ListView listViewCatalog;
         List<Product> productList;
+
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,6 +41,9 @@ namespace frutappi.Activities
 
             ProductAdapter productAdapter = new ProductAdapter(this, productList);
             listViewCatalog.Adapter = productAdapter;
+
+
+
         }
     }
 }

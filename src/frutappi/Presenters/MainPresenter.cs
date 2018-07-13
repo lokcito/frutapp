@@ -65,5 +65,11 @@ namespace frutappi.Presenters
             Intent newActivity = new Intent(this.context, typeof(MenuActivity));
             this.context.StartActivity(newActivity);
         }
+
+        internal void showFriends(object sender, EventArgs e)
+        {
+            Intent newActivity = new Intent(this.context, typeof(FriendsActivity));
+            this.context.StartActivity(newActivity);
+        }
     }
 }

@@ -78,11 +78,15 @@
     <Compile Include="Activities\LocationsActivity.cs" />
     <Compile Include="Activities\TabActivity.cs" />
     <Compile Include="Activities\MenuActivity.cs" />
+    <Compile Include="Activities\FriendsActivity.cs" />
+    <Compile Include="Models\Toke.cs" />
+    <Compile Include="Adapters\TokeAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.axml">
@@ -125,6 +129,8 @@
     <AndroidResource Include="Resources\values\drawables.xml" />
     <AndroidResource Include="Resources\layout\nav_header_main.axml" />
     <AndroidResource Include="Resources\layout\app_bar_main.axml" />
+    <AndroidResource Include="Resources\layout\activity_friends.axml" />
+    <AndroidResource Include="Resources\layout\adapter_toke_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl">
@@ -136,8 +142,8 @@
     <PackageReference Include="Xamarin.Android.Support.Design">
       <Version>27.0.2.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Database">
-      <Version>60.1142.1</Version>
+    <PackageReference Include="FireSharp">
+      <Version>2.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
