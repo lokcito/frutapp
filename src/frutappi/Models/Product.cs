@@ -34,12 +34,13 @@ namespace frutappi.Models
             };            
         }
 
-        public static bool fireSync() {
-            //var userNamesRef = FirebaseDatabase.GetInstance("https://myxamarinproject-209715.firebaseio.com").GetReference("/");
-            //DataSnapshot o = userNamesRef.
+//<<<<<<< HEAD
+//        public static bool fireSync() {
+//            //var userNamesRef = FirebaseDatabase.GetInstance("https://myxamarinproject-209715.firebaseio.com").GetReference("/");
+//            //DataSnapshot o = userNamesRef.
+//=======
+//>>>>>>> eaa126aac1fbae956426b8eece3f73304cba5ae5
 
-            return false;
-        }
 
         public static List<Product> sync() {
             var client = new RestClient();
